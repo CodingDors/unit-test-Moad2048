@@ -1,3 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def filter_even_numbers(numbers):
+    even_numbers = []
+    for num in numbers:
+        if num % 2 == 0:
+            even_numbers.append(num)
+    return even_numbers
+
+def sum_positive_numbers(numbers):
+    positive_sum = 0
+    for num in numbers:
+        if num > 0:
+            positive_sum += num
+    return positive_sum
+
+def find_largest_string(strings):
+    if len(strings) == 0:
+        return ""
+
+    largest_string = strings[0]
+    for s in strings:
+        if len(s) > len(largest_string):
+            largest_string = s
+    return largest_string
+
+def count_occurrences(numbers):
+    occurrences = {}
+    for num in numbers:
+        if num in occurrences:
+            occurrences[num] += 1
+        else:
+            occurrences[num] = 1
+    return occurrences
+
+
+
 import unittest
 from exercise import *
 

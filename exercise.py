@@ -12,7 +12,7 @@ def filter_even_numbers(numbers):
     >>> filter_even_numbers([1, 2, 3, 4, 5, 6])
     [2, 4, 6]
     """
-    return [num for num in numbers if num % 2 == 0]
+    pass
 
 def sum_positive_numbers(numbers):
     """
@@ -64,3 +64,41 @@ def count_occurrences(numbers):
     {1: 1, 2: 2, 3: 3}
     """
     pass
+
+
+def driver():
+    while True:
+        print("Choose a function to test:")
+        print("1. Filter even numbers from a list.")
+        print("2. Sum positive numbers from a list.")
+        print("3. Find the largest string from a list of strings.")
+        print("4. Count occurrences of numbers in a list.")
+        print("5. Exit.")
+        
+        choice = input("Enter your choice (1/2/3/4/5): ")
+
+        if choice == "1":
+            numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+            print(filter_even_numbers(numbers))
+
+        elif choice == "2":
+            numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+            print(sum_positive_numbers(numbers))
+
+        elif choice == "3":
+            strings = input("Enter strings separated by commas: ").split(", ")
+            print(find_largest_string(strings))
+
+        elif choice == "4":
+            numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+            print(count_occurrences(numbers))
+
+        elif choice == "5":
+            print("Exiting...")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    driver()
